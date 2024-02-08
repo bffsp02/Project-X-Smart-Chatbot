@@ -1,0 +1,21 @@
+# smart_chatbot.py
+
+class SmartChatbot:
+    def __init__(self):
+        self.responses = {
+            "hello": "Hello! How can I assist you today?",
+            "how_are_you": "I'm doing well, thank you for asking!",
+            "bye": "Goodbye! Have a great day!"
+        }
+
+    def respond(self, user_input):
+        if user_input.lower() in self.responses:
+            return self.responses[user_input.lower()]
+        else:
+            return "I'm sorry, I didn't understand that."
+
+# Example usage:
+chatbot = SmartChatbot()
+user_input = input("User: ")
+response = chatbot.respond(user_input)
+print("Chatbot:", response)
